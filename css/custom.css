@@ -1,0 +1,124 @@
+:root{
+    --bg-color: linear-gradient(45deg, #accbee 10%, #e7f0fd 90%); 
+    --font-color: rgb(0, 0, 0);
+    --nav-color: rgba(34, 34, 34, 0);
+}
+[data-theme="dark"]{
+    --bg-color: linear-gradient(45deg, #09203f 10%, #537896 90%);
+    --font-color: #fefefe;
+    --nav-color: rgba(34, 34, 34, 0);
+}
+body{
+    background: var(--bg-color) ;
+    color: var(--font-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+    em {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.navbar{
+    background-color: var(--nav-color);
+    color: var(--font-color);
+}
+li{
+    color: var(--font-color);
+}
+ .home{
+    background: rgba( 0, 0, 0, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+ } 
+ .card{
+  background:rgba(255, 255, 255, 0);;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.container {
+  position: relative;
+}
+.container__input:not(:placeholder-shown) + .container__label {
+  background: #fff;
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.container__label {
+  /* Position the label */
+  left: 8px;
+  position: absolute;
+  top: 0;
+
+  /* Hide it by default */
+  opacity: 0;
+  transition: all 200ms;
+}
+input,textarea{
+  border-radius: 10px;
+  border: none;
+}
+textarea:focus{
+  border-color: #fff !important;
+  box-shadow:  none !important;
+}
